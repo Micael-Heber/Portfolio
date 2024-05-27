@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&family=Oswald:wght@300&display=swap');
+
+:root {
+    --color-borders: #6400a7;
+    --color-transitions: #6400a7;
+    --color-buttons: #24044e;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #110520;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+header {
+    padding: 18px;
+    border-bottom: 1px solid var(--color-borders);
+    background: #0c001a;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color: white;
+    font-size: 25px;
+    line-height: 20px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--color-transitions);
+    transition: color 400ms;
+} 
+
+#wrapper {
+    text-align: center;
+    padding: 30px;
+}
+
+#wrapper img {
+    margin-top: 8px;
+    border-radius: 50%;
+    width: 230px;
+    border: 2px solid var(--color-borders);
+}
+
+.cat {
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+}
+
+#wrapper h1{
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#wrapper h2{
+    font-size: 24px;
+    line-height: 34px;
+    opacity: 0.8;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#wrapper p{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#links-footer a{
+    border-bottom: 1px solid var(--color-borders);
+    font-size: 22px;
+}
+
+/*CARDS*/
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    font-size: 18px;
+    
+}
+
+.card {
+    background-color: var(--color-buttons) ;
+    border-radius: 15px;
+}
+
+.card-image-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-content,
+.cardinfo {
+    padding: 20px;
+}
+
+.cardinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cardbutton {
+    background-color: var(--color-buttons);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/**MODAL*/
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .material-symbols-outlined {
+    color: black;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/*modal-active*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
